@@ -1,0 +1,8 @@
+include ':app'
+
+include ':IMKit'
+project(':IMKit').projectDir = new File(rootProject.projectDir, './IMKit')
+include ':IMLib'
+project(':IMLib').projectDir = new File(rootProject.projectDir, './IMLib')
+include ':CallLib'
+project(':CallLib').projectDir = new File(rootProject.projectDir, './CallLib')
