@@ -42,9 +42,9 @@ task clean(type: Delete) {
 
 ext {
     userOrg = 'neilzhengzx'
-    groupId = 'com.smobiler'
-    uploadName = 'android-rongim'
-    publishVersion = '2.9.6'
+    groupId = 'com.rnsmobiler'
+    uploadName = 'smobiler-rongim'
+    publishVersion = '2.8.32'
     desc = 'Request code can be generated automatically'
     website = 'https://github.com/neilzhengzx/mavenProject'
     licences = ['Apache-2.0']
