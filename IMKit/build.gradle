@@ -1,4 +1,16 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+    artifactId = 'IMKit'
+    userOrg = rootProject.userOrg
+    groupId = rootProject.groupId
+    uploadName = rootProject.uploadName
+    publishVersion = rootProject.publishVersion
+    desc = rootProject.desc
+    website = rootProject.website
+    licences = rootProject.licences
+}
 
 android {
     compileSdkVersion 26
@@ -27,6 +39,10 @@ android {
             jni.srcDirs = []
             jniLibs.srcDirs = ['src/main/libs']
         }
+    }
+
+    lintOptions {
+        abortOnError false
     }
 }
 
