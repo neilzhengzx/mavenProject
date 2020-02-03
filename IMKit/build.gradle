@@ -1,25 +1,13 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
-
-publish {
-    artifactId = 'IMKit'
-    userOrg = rootProject.userOrg
-    groupId = rootProject.groupId
-    uploadName = rootProject.uploadName
-    publishVersion = rootProject.publishVersion
-    desc = rootProject.desc
-    website = rootProject.website
-    licences = rootProject.licences
-}
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '27'
+
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 2018051019
-        versionName "2.8.32 Stable"
+        versionCode 2020011311
+        versionName "2.10.3 release"
     }
     buildTypes {
         release {
@@ -40,16 +28,15 @@ android {
             jniLibs.srcDirs = ['src/main/libs']
         }
     }
-
-    lintOptions {
-        abortOnError false
-    }
 }
 
 dependencies {
-    compile fileTree(dir: 'src/main/libs', include: ['*.jar'])
-    compile 'com.android.support:support-v4:26.0.0'
-    compile project (':IMLib')
+    api fileTree(dir: 'src/main/libs', include: ['*.jar'])
+    api 'com.android.support:support-v4:26.1.0'
+    api 'com.googlecode.mp4parser:isoparser:1.0.6'
+    api 'com.android.support:exifinterface:26.1.0'
+    api project (':IMLib')
+    api 'com.github.bumptech.glide:glide:4.9.0'
 }
 
 repositories {

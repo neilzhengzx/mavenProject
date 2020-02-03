@@ -10,7 +10,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:3.5.0'
         classpath 'com.novoda:bintray-release:0.3.4'
         
 
@@ -44,7 +44,7 @@ ext {
     userOrg = 'neilzhengzx'
     groupId = 'com.rnsmobiler'
     uploadName = 'smobiler-rongim'
-    publishVersion = '2.8.32'
+    publishVersion = '2.10.3'
     desc = 'Request code can be generated automatically'
     website = 'https://github.com/neilzhengzx/mavenProject'
     licences = ['Apache-2.0']

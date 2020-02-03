@@ -23,10 +23,10 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':IMKit')
-    compile project(':IMLib')
-    compile project(':CallLib')
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support.constraint:constraint-layout:1.1.3'
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api project(':IMKit')
+    api project(':IMLib')
+    api project(':CallLib')
+    api 'com.android.support:appcompat-v7:26.1.0'
+    api 'com.android.support.constraint:constraint-layout:1.1.3'
 }

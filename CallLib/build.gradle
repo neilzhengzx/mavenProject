@@ -1,26 +1,13 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
-
-publish {
-    artifactId = 'CallLib'
-    userOrg = rootProject.userOrg
-    groupId = rootProject.groupId
-    uploadName = rootProject.uploadName
-    publishVersion = rootProject.publishVersion
-    desc = rootProject.desc
-    website = rootProject.website
-    licences = rootProject.licences
-}
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '27'
 
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 2018051019
-        versionName "2.8.32 Stable"
+        versionCode 2020011018
+        versionName "2.10.3 release"
     }
 
     sourceSets {
@@ -30,15 +17,12 @@ android {
             jniLibs.srcDirs = ['libs']
         }
     }
-
-    lintOptions {
-        abortOnError false
-    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:support-compat:26.0.0'
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api 'com.android.support:support-compat:26.1.0'
+    api 'com.google.code.gson:gson:2.8.1'
 }
 
 repositories {
